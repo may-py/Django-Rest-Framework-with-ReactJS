@@ -1,7 +1,3 @@
-from email.mime import audio
-from statistics import mode
-from tokenize import Token
-from unittest import mock
 from django.shortcuts import render
 from rest_framework.viewsets import ModelViewSet
 from todo.models import Todos

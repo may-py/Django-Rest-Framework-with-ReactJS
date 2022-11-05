@@ -1,0 +1,22 @@
+{% extends 'todo/home.html' %}
+{% block content %}
+<div class="row">
+<div class="col-md-5">
+    <form enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Submit</button>
+
+    </form>
+</div>
+<div class="col-md-7">
+    {% for obj in obj_list %}
+    <h2>{{ obj.title }}</h2>
+    <p>{{ obj.desc}}</p>
+    <span><a class="btn btn-primary" href="{% url 'update' obj.pk %}">Update</a> 
+        <a class="btn btn-danger" href="{% url 'delete' obj.pk %}">Delete</a>
+    </span>
+    {% endfor %}
+</div>
+</div>
+{% endblock content %}

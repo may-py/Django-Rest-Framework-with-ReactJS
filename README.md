@@ -1,3 +1,1 @@
-# Django-Rest-Framework-with-ReactJS
-
-Django backend and RestJS frontend. 
+# TODOS : Django Backend(DRF) with ReactJS Frontend
